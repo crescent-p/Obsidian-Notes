@@ -83,3 +83,4 @@ by deafault its port 8000. So go to azure portal and create an inbound port rule
 
 Number of workers = set to number of cpu cores you have to balance load across cpu cores.
 
+Yes
