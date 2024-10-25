@@ -82,5 +82,3 @@ by deafault its port 8000. So go to azure portal and create an inbound port rule
 `gunicorn -w <numberOfWorkers> -k uvicorn.workers.UvicornWorker apps.main:app --bind 0.0.0.0:8000`
 
 Number of workers = set to number of cpu cores you have to balance load across cpu cores.
-
-Yes
