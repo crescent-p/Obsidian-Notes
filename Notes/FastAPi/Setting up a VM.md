@@ -28,7 +28,7 @@ Connecting to postgres
 Change the postgres.config file change the listen_addresses= '*'
 
 change pg_hba.config 
-update `local   all postgres    md5 (this was peer, peer authentication is anoy)`
+update `local   all postgres    md5 (this was peer, peer authentication is anoying)`
 update
 ```
 # Database administrative login by Unix domain socket
