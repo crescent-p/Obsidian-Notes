@@ -67,7 +67,7 @@ Suppose you have a SQLAlchemy model called `User`, and you want to add a new col
    alembic upgrade head
    ```
 
-Now the `users` table in your database has an `email` column.
+Now the `users` table in your database has an `email` column.ls
 
 ### Summary:
 
