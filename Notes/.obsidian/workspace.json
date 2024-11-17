@@ -27,110 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "What to do/EE Notes.md",
+                "file": "What to do/DBMS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "EE Notes"
-            }
-          },
-          {
-            "id": "664883ba35fb1369",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "FastAPi/Setting up a VM.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Setting up a VM"
-            }
-          },
-          {
-            "id": "3ed39dac44b8b2cc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "FastAPi/Creating a Service in VM.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Creating a Service in VM"
-            }
-          },
-          {
-            "id": "0d1ceab80fceb3fd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "FastAPi/NGINX.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "NGINX"
-            }
-          },
-          {
-            "id": "be637df26aa8add3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "FastAPi/Setting up firewall for your VM.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Setting up firewall for your VM"
-            }
-          },
-          {
-            "id": "32414c039354caa3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "FastAPi/Alembic.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Alembic"
-            }
-          },
-          {
-            "id": "e5633b19427d4547",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Linux Driver/Introduction.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Introduction"
-            }
-          },
-          {
-            "id": "10409b022fd5379b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Linux Driver/prerequisites.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "prerequisites"
+              "title": "DBMS"
             }
           },
           {
@@ -179,7 +81,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "sql",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -266,19 +168,18 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "FastAPi/SSHing into azure.md"
+                "file": "What to do/DBMS.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of SSHing into azure"
+              "title": "Outline of DBMS"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -287,24 +188,32 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false,
+      "publish:Publish changes...": false
     }
   },
   "active": "058136bc0c1c9e91",
   "lastOpenFiles": [
-    "Pasted image 20241114034504.png",
-    "Pasted image 20241114034502.png",
-    "Pasted image 20241114030757.png",
-    "Pasted image 20241114030543.png",
-    "Pasted image 20241114022115.png",
-    "Pasted image 20241114022112.png",
-    "Pasted image 20241114021208.png",
-    "Pasted image 20241114021205.png",
-    "Pasted image 20241114021203.png",
-    "Pasted image 20241113213139.png",
-    "Pasted image 20241113212619.png",
-    "FastAPi/Setting up a VM.md",
     "What to do/EE Notes.md",
+    "Database Managment/Window Functions.md",
+    "Database Managment/mysql.md",
+    "What to do/DBMS.md",
+    "FastAPi/Alembic.md",
+    "Pasted image 20241116143640.png",
+    "Pasted image 20241116143431.png",
+    "Pasted image 20241116143415.png",
+    "Pasted image 20241116143222.png",
+    "Pasted image 20241116143149.png",
+    "Pasted image 20241116140900.png",
+    "Pasted image 20241116140548.png",
+    "Pasted image 20241116140523.png",
+    "Pasted image 20241116135104.png",
+    "Linux Driver/prerequisites.md",
+    "Linux Driver/Introduction.md",
+    "FastAPi/NGINX.md",
+    "Pasted image 20241114034504.png",
+    "FastAPi/Setting up a VM.md",
     "Network Attacks/DoS.md",
     "FastAPi/ORM Object Relational Mapper.md",
     "FastAPi/Postgress.md",
@@ -312,12 +221,8 @@
     "FastAPi/Routers.md",
     "FastAPi/System Environments.md",
     "FastAPi/Setting up POSTGRESS in wsl.md",
-    "FastAPi/NGINX.md",
     "FastAPi/Docker.md",
-    "FastAPi/Alembic.md",
     "FastAPi/Creating a Service in VM.md",
-    "Linux Driver/prerequisites.md",
-    "Linux Driver/Introduction.md",
     "Linux Driver/Driver Implementation.md",
     "MakeFile/How to.md",
     "MakeFile/Introduction.md",
@@ -327,8 +232,6 @@
     "FastAPi/bcrypt.md",
     "FastAPi/Activating Virtual env in python.md",
     "Linux Driver",
-    "React/Setting UP.md",
-    "React/sdf.md",
     "React",
     "FastAPi",
     "Untitled",
