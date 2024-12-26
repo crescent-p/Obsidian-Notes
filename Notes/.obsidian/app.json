@@ -4,5 +4,12 @@
   "alwaysUpdateLinks": true,
   "newLinkFormat": "shortest",
   "readableLineLength": false,
-  "showIndentGuide": false
+  "showIndentGuide": false,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  }
 }

@@ -1,4 +1,4 @@
-![[Pasted image 20241015001549.png]]
+F![[Pasted image 20241015001549.png]]
 
 ```python
 @app.get("/posts/{id}")

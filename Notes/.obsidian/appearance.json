@@ -2,5 +2,7 @@
   "baseFontSize": 16,
   "baseFontSizeAction": true,
   "cssTheme": "",
-  "theme": "system"
+  "theme": "system",
+  "textFontFamily": "Calibri,Courier",
+  "interfaceFontFamily": "Calibri"
 }

@@ -351,3 +351,44 @@ financial services
 	fee based services
 
 
+
+
+```mermaid
+flowchart TD
+    subgraph Frontend
+        A[React + Vite Client]
+    end
+
+    subgraph Proxy
+        N[Nginx Reverse Proxy]
+    end
+
+    subgraph Backend
+        F[FastAPI Server]
+        P[Pydantic Data Validation]
+        S[SQLAlchemy ORM]
+        D[(PostgreSQL Database)]
+        V[Backend Logic]
+    end
+
+    A -->|HTTP/HTTPS Request| N
+    N -->|Forwarded Request| F
+    F -->|Validate Input| P
+	P --> V
+	V -->|Query/Modify Data| S
+    S -->|Database Interactions| D
+    D -->|Query Results| S
+    S -->|Validated Response| F
+    F -->|Response| N
+    N -->|Response| A
+
+    classDef frontend fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef backend fill:#bbf,stroke:#333,stroke-width:2px;
+    classDef proxy fill:#bfb,stroke:#333,stroke-width:2px;
+    classDef database fill:#ff9,stroke:#333,stroke-width:2px;
+
+    class A frontend;
+    class N proxy;
+    class F,P backend;
+    class D database;
+```

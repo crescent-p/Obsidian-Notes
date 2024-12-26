@@ -27,7 +27,11 @@ Connecting to postgres
 
 Change the postgres.config file change the listen_addresses= '*'
 
-change pg_hba.config 
+change `pg_hba.config` 
+
+@ `/etc/postgresql/{version}/main/pg_hba.conf`
+
+
 update `local   all postgres    md5 (this was peer, peer authentication is anoying)`
 update
 ```
@@ -79,6 +83,6 @@ by deafault its port 8000. So go to azure portal and create an inbound port rule
 
 `pip install gunicorn`
 
-`gunicorn -w <numberOfWorkers> -k uvicorn.workers.UvicornWorker apps.main:app --bind 0.0.0.0:8000`
+`gunicorn -w 2 -k uvicorn.workers.UvicornWorker apps.main:app --bind 0.0.0.0:8000`
 
 Number of workers = set to number of cpu cores you have to balance load across cpu cores.
