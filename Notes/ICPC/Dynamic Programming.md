@@ -30,3 +30,18 @@ where $S \setminus \{i\}$ is the subset $S$ without city $i$.
 	1) things we need to remember ->
 		1) a boolean f1 :: if we have choosen something smaller building the number from the left. If we have then we are free to choose any number greater or lesser than b. Else we can only choose choose max(b[i]) at that position.
 		2) a boolean f2 :: if we have chooosen a number bigger than a building the number from left to right. IF YES then we are free to choose anything, otherwise we have to chosse in range a[i] to 9.
+
+
+
+```cpp
+  
+ll dp[25][2][2][2];
+  
+ll find(ll pos, ll under, ll over, ll started, ll prod, string num);
+
+
+//basic parameters to have
+```
+
+	1) under if number is already lower than b in [a, b]
+	2) over if number is already higher than a in [a, b]  ie, if we chose a nubmer a + 1 before then we are free to choose anything for the next digits.

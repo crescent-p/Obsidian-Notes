@@ -135,3 +135,19 @@ for(int j = 0; j < s.size(); j++) {
     }  
 }
 ```
+
+
+# Shortest Path Modeling
+
+	Graph modeling is where instead of rewriting dijkstra's to match the problem, we reconfigure the graph and use normal dijkstra to find the solution.
+	We want to craete additional nodes to represent some state.
+	 For example if there is 10 nodes and there can be 5 states for each. We create a 10 * 5 node graph to represent it.
+			 For these the time complexity would be of order O(n^2).
+
+### Problem 1
+	You have to travel from city A to city B, car can store K litres of petrol. Each city has price of petrol Ci, and traveling between city u to v cost Li litres of petrol. Find minimum litres of petrol needed.
+		- the graph has to have node for (city, fuel_in_tank)
+
+  ![[Pasted image 20250110201525.png]]  
+
+	 Here going from cityA to cityB, C, D doesn't take any weight, and fueling the car costs Li dollars. No we can run dijkstra from (0,0) and answer would be min of (n, [0 - max_capacity]).
