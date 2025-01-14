@@ -8,35 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "cc5536d98ff0ad90",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DBMS theory/DBMS.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "DBMS"
-            }
-          },
-          {
             "id": "2c8e5d64c322237a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LAB STUFF/NETWORK Week 1.md",
+                "file": "OOPS in C++/Abstract class.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "NETWORK Week 1"
+              "title": "Abstract class"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -154,14 +139,14 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Network Lab/Week 1.md"
+                "file": "OOPS in C++/Abstract class.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Week 1"
+              "title": "Outline of Abstract class"
             }
           },
           {
-            "id": "3b3ccf478336a1cd",
+            "id": "0e08f2dd4b66a975",
             "type": "leaf",
             "state": {
               "type": "mermaid-toolbar-view",
@@ -171,12 +156,11 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -191,8 +175,19 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "b779b1c1e9bda97b",
+  "active": "2c8e5d64c322237a",
   "lastOpenFiles": [
+    "LAB STUFF/NETWORK LAB week 2.md",
+    "Pasted image 20250114182849.png",
+    "DBMS theory/DBMS.md",
+    "Pasted image 20250114142856.png",
+    "Pasted image 20250114142046.png",
+    "LAB STUFF/NETWORK Week 1.md",
+    "LAB STUFF/Compiler LAB STAGE 0.md",
+    "Pasted image 20250110222540.png",
+    "Pasted image 20250110221900.png",
+    "Pasted image 20250110221809.png",
+    "Pasted image 20250110220625.png",
     "What to do/EE Notes.md",
     "LAB STUFF",
     "App timeLine.md",
@@ -203,7 +198,6 @@
     "Pasted image 20250110201525.png",
     "Pasted image 20250110201522.png",
     "Open Elective Allocation/Open Elective Allocation.md",
-    "LAB STUFF/NETWORK Week 1.md",
     "Open Elective Allocation",
     "Networks/API.md",
     "Network Lab",
@@ -215,9 +209,6 @@
     "Pasted image 20241219110709.png",
     "React/Creating a react app.md",
     "React/Setting UP.md",
-    "Pasted image 20241210112052.png",
-    "Pasted image 20241209220611.png",
-    "Pasted image 20241209220610.png",
     "FastAPi/Creating a Service in VM.md",
     "FastAPi/Setting up a VM.md",
     "ICPC/Sliding Window.md",
@@ -225,14 +216,7 @@
     "ICPC/Topics.md",
     "Linux Driver/Untitled.md",
     "ICPC",
-    "DBMS theory/DBMS.md",
-    "What to do/Theory of computation.md",
-    "What to do/Number theory and cryptography.md",
-    "Pasted image 20241201170431.png",
-    "Pasted image 20241201170430.png",
     "Where is my bus",
-    "Pasted image 20241124162414.png",
-    "Pasted image 20241124131903.png",
     "Untitled.canvas",
     "Linux Driver",
     "React",
