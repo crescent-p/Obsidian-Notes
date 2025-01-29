@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OOPS in C++/Abstract class.md",
+                "file": "Useless Notes/Principles of Management.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Abstract class"
+              "title": "Principles of Management"
             }
           }
         ]
@@ -139,10 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OOPS in C++/Abstract class.md"
+                "file": "Useless Notes/Principles of Management.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Abstract class"
+              "title": "Outline of Principles of Management"
             }
           },
           {
@@ -177,26 +177,36 @@
   },
   "active": "2c8e5d64c322237a",
   "lastOpenFiles": [
-    "LAB STUFF/NETWORK LAB week 2.md",
-    "Pasted image 20250114182849.png",
-    "DBMS theory/DBMS.md",
-    "Pasted image 20250114142856.png",
-    "Pasted image 20250114142046.png",
+    "LAB STUFF/NETWORK week 2.md",
+    "Useless Notes/Principles of Management.md",
+    "Pasted image 20250125200418.png",
+    "Networks/Network Tools.md",
+    "Networks/Wireless Protocols.md",
+    "Networks/What are Networks.md",
+    "System Design/Introduction.md",
+    "System Design/WebSockets.md",
+    "Compiler Theory/Notes.md",
+    "Pasted image 20250124175248.png",
+    "Pasted image 20250124175243.png",
+    "Pasted image 20250124175233.png",
+    "Pasted image 20250124175227.png",
+    "Pasted image 20250124162037.png",
+    "Pasted image 20250124151435.png",
+    "Pasted image 20250124150425.png",
+    "Pasted image 20250124150316.png",
+    "Pasted image 20250124150305.png",
+    "Compiler Theory",
     "LAB STUFF/NETWORK Week 1.md",
+    "OOPS in C++/Abstract class.md",
+    "DBMS theory/DBMS.md",
     "LAB STUFF/Compiler LAB STAGE 0.md",
-    "Pasted image 20250110222540.png",
-    "Pasted image 20250110221900.png",
-    "Pasted image 20250110221809.png",
-    "Pasted image 20250110220625.png",
-    "What to do/EE Notes.md",
+    "Useless Notes/EE Notes.md",
     "LAB STUFF",
     "App timeLine.md",
     "Where is my bus/Setup.md",
     "Networks/IPv6.md",
     "Networks/Layers of TCP-IP.md",
     "ICPC/Graph Theory.md",
-    "Pasted image 20250110201525.png",
-    "Pasted image 20250110201522.png",
     "Open Elective Allocation/Open Elective Allocation.md",
     "Open Elective Allocation",
     "Networks/API.md",
@@ -206,22 +216,13 @@
     "ICPC/Point update range sum queries.md",
     "ICPC/Dynamic Programming.md",
     "ICPC/Stack.md",
-    "Pasted image 20241219110709.png",
     "React/Creating a react app.md",
-    "React/Setting UP.md",
-    "FastAPi/Creating a Service in VM.md",
-    "FastAPi/Setting up a VM.md",
-    "ICPC/Sliding Window.md",
-    "FastAPi/NGINX.md",
-    "ICPC/Topics.md",
-    "Linux Driver/Untitled.md",
     "ICPC",
     "Where is my bus",
     "Untitled.canvas",
     "Linux Driver",
     "React",
     "FastAPi",
-    "Essentials",
-    "Python backend Development"
+    "Essentials"
   ]
 }
