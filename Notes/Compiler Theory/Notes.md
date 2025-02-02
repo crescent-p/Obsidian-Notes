@@ -135,6 +135,7 @@ $$FIRST(B) = {a, k}$$
 $$FIRST(C) = {q}$$
 	If lookahead an element in FIRST(B) choose B else if element in FIRST(C) choose C else error.
 	If FIRST(B) and FIRST(C) are disjoint a parsing decision can be made by the lookahead symbol. 
+	If A -> a then add everything in FIRST(a) to FIRST(A)
 
 #### Predictive parsing table based on FIRST sets
 
@@ -158,12 +159,19 @@ $$FIRST(C) = {q}$$
 	if d ε FOLLOW(C)
 #### FOLLOW(A)
 	The set of terminals that can appear to the right of A in a sentential form. In addition if it is the rightmost symbol in some sentential form then $ is also in the set of FOLLOW(A). -- SENTENTIAL FORM --
+	Try writing the sentential forms and write follow from that, even an intermediate step is enough to be included as a FOLLOW element.
+	If A -> aB add everything in FOLLOW(A) to FOLLOW(B)
 	
 																											S ∗⇒ αAaβ
 	1) S $
 	2) E + E $
 	3) id + E $
 	Here S is followed by $, E is followed by + and $, id is followed by + and likewise.
+	Steps to compute FOLLOW(S): S is the start symbol
+		1) place $ in FOLLOW(S)
+		2) if there is a production A -> aBb then add everthing except ε of FIRST(b) in FOLLOW(B)
+		3) if there is a produtction A -> aBb and if b contains ε then add everything in FOLLOW(A) to FOLLOW(B)
+		4) if there is a production A -> aB then add everything in FOLLOW(A) to FOLLOW(B)
 #### Parsing table using follow
 ![[Pasted image 20250124175243.png]]
 
@@ -176,7 +184,11 @@ $$FIRST(C) = {q}$$
 	Productions like this are not suitable for predictive parsing:
 	
 																						E → id + id | id ∗ id 
-
+	Steps in making creating predictive parsing table:
+		1) for each terminal a ε FIRST(A) add A -> a in T[A, a]
+		2) if ε in FIRST(A), for each terminal b in FOLLOW(A) add A -> a in T[A, b]
+			because sometimes you might need to choose a production that gives epsilon on first to get the correct symbol which might come in the second position.
+		3) if ϵ is in FIRST(α), and $ is in FOLLOW (A), add A → α to T[A, $].
 
 #### Grammar Transformation
 	Convert the given non predictive grammar to an equivalent predictable form.
@@ -194,5 +206,88 @@ $$FIRST(C) = {q}$$
 
 	
 
-## Semantic Analysis
+### Non Recursive Predictive Parsing
+
+	Input : string S and Parsing table T for grammar G
+	Output : If S belong to grammar G or not. IF yes give leftmost derivation of w.
+
+### LL(1) Grammar
+	A grammar for which predictive parsing table can be built with one symbol look ahead is called LL(1) grammar. 
+	- Left to right
+	- Leftmost derivation 
+	- 1 for one symbol look ahead.
+	- E → id + id | id ∗ id is not LL(1) because it needs to look ahead two symbols to decide the next production.
+	- if A -> a | b and FIRST(a) intersection FIRST(b) is not null then it is not suitable for predictive parsing.
+#### Rules
+	1) FIRST(a), FIRST(b) should be disjoint
+	2) If ε is in FIRST(A), then FIRST(B) should not contain any terminal in FOLLOW(A)
+	3) If ϵ is in FIRST(β), then FIRST(α) should not contain any terminal in FOLLOW (A)
 	
+	Left recursive grammar can be converted to equivalent right recursive grammar. 
+		A -> Aa | b 
+						to 
+		A -> bA`
+		A` -> aA` | ε
+	Steps :
+			A → Aα | β
+			to an equivalent grammar (right recursive)
+			A → βA`
+			A` → αA` | ϵ
+
+
+## Bottom Up Parsing
+	Equivalentlty does a rightmost derivation in reverse order.
+### Shift reduce parsing 
+	A kind of bottom up parsing. A stack holds grmmar symbols and a buffer holds the input string.
+	Start wiht $ as the only symbol in the stack.
+	The input strings are shifted into the stack until a reduction can be done. (aks a handle is found)
+	head -> tail.
+	when a tail is found in the stack it is reduced to its corresponding head.
+	Four possible actions : shift/reduce/accept/error
+
+#### Handle
+	A handle in a right-sentential form γ is a production A -> b and a postion in γ where b may be found.
+		- for convenience b is called the handle instead of A -> b
+		- A right sentential form is a string that can be dervied by right deriving a Start symbol.
+#### Handle Pruning
+	The handles are pruned to get the previous sentitential form. This is repeated until the start symbol is found.
+	- Locating a handle is hard, you may sometimes need to examine the whole stack to find one.
+
+#### Parser States
+	- State indicates how much of a production the parser has seen.
+	- current state will be on top of the stack.
+	- parse makes decision based on the state and the next input symbol.
+#### Item
+	- indicates how much of a production the parser has seen.
+	- a parser is represeted by a set of items.
+	- A -> a.b parser has seen until a and may go a reduction A -> a
+	- A -> ab. parser has seen until b and may go a reduction A -> ab
+##### LR(0) Items
+	- an item of the form A -> a.b is called an LR(0) item.
+	- a state of the parser is defined by a set of lr(0) items.
+#### Augmented Grammar
+	- a new production S` -> S
+	- parser accepts when when it is about to reduce S` -> S
+#### Closure of set of items
+	- add every item in I to closure(I)
+	- If A → α.Bβ is in Closure(I) then for each production B → γ, add B → .γ to Closure(I).
+	- exmaple : 
+		S′ → S
+		S → L = R
+		L → id
+		R → num
+		Closure({S → .L = R}) = {S → .L = R, L → .id}
+		Closure({S → L = .R}) = {S → L = .R, R → .num}
+### Goto
+	Goto(I, X) where I is a set of items and X is a grammar symbol is defined to be the set of all items in the closure of A → αX.β such that A → α.Xβ is in I
+	EXAMPLE : 
+	S′ → S
+	S → L = R
+	L → id
+	R → num
+	Goto({S → L. = R}, =)
+	is {S → L = .R, R → .num}
+
+# Semantic Analysis
+	Semantic analysis is about the actual meaning. It's a step after parsing where we assign each token a specific category or value. For example an integer or a string.
+

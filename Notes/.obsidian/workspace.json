@@ -40,7 +40,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -139,7 +140,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Useless Notes/Principles of Management.md"
+                "file": "Useless Notes/Principles of Management.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
               "title": "Outline of Principles of Management"
@@ -177,35 +181,38 @@
   },
   "active": "2c8e5d64c322237a",
   "lastOpenFiles": [
-    "LAB STUFF/NETWORK week 2.md",
+    "Useless Notes/EE Notes.md",
+    "CompTIA/Introduction to network devices.md",
+    "Pasted image 20250201220419.png",
+    "Pasted image 20250201220324.png",
+    "Pasted image 20250201220151.png",
+    "Pasted image 20250201215939.png",
+    "Pasted image 20250201213749.png",
+    "Pasted image 20250201213602.png",
+    "Pasted image 20250201213547.png",
+    "Pasted image 20250201213520.png",
+    "Pasted image 20250201154629.png",
+    "Pasted image 20250201153503.png",
+    "Networks/Layers of TCP-IP.md",
+    "CompTIA",
+    "LAB STUFF/NETWORK VLAN's.md",
+    "Compiler Theory/Notes.md",
     "Useless Notes/Principles of Management.md",
-    "Pasted image 20250125200418.png",
+    "LAB STUFF/NETWORK week 2.md",
     "Networks/Network Tools.md",
     "Networks/Wireless Protocols.md",
     "Networks/What are Networks.md",
     "System Design/Introduction.md",
     "System Design/WebSockets.md",
-    "Compiler Theory/Notes.md",
-    "Pasted image 20250124175248.png",
-    "Pasted image 20250124175243.png",
-    "Pasted image 20250124175233.png",
-    "Pasted image 20250124175227.png",
-    "Pasted image 20250124162037.png",
-    "Pasted image 20250124151435.png",
-    "Pasted image 20250124150425.png",
-    "Pasted image 20250124150316.png",
-    "Pasted image 20250124150305.png",
     "Compiler Theory",
     "LAB STUFF/NETWORK Week 1.md",
     "OOPS in C++/Abstract class.md",
     "DBMS theory/DBMS.md",
     "LAB STUFF/Compiler LAB STAGE 0.md",
-    "Useless Notes/EE Notes.md",
     "LAB STUFF",
     "App timeLine.md",
     "Where is my bus/Setup.md",
     "Networks/IPv6.md",
-    "Networks/Layers of TCP-IP.md",
     "ICPC/Graph Theory.md",
     "Open Elective Allocation/Open Elective Allocation.md",
     "Open Elective Allocation",
@@ -214,15 +221,11 @@
     "ICPC/Bitmasking.md",
     "ICPC/String matching.md",
     "ICPC/Point update range sum queries.md",
-    "ICPC/Dynamic Programming.md",
-    "ICPC/Stack.md",
-    "React/Creating a react app.md",
     "ICPC",
     "Where is my bus",
     "Untitled.canvas",
     "Linux Driver",
     "React",
-    "FastAPi",
-    "Essentials"
+    "FastAPi"
   ]
 }
