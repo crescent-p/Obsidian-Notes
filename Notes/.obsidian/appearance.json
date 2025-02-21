@@ -1,8 +1,9 @@
 {
-  "baseFontSize": 16,
+  "baseFontSize": 22,
   "baseFontSizeAction": true,
   "cssTheme": "",
   "theme": "system",
   "textFontFamily": "Calibri,Courier",
-  "interfaceFontFamily": "Calibri"
+  "interfaceFontFamily": "Calibri",
+  "accentColor": "#00fffb"
 }

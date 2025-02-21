@@ -54,8 +54,8 @@ To install PostgreSQL on a Linux system, you can follow these steps. The process
    You can create a new database and user by executing:
    ```sql
    CREATE DATABASE mydatabase;
-   CREATE USER myuser WITH ENCRYPTED PASSWORD 'mypassword';
-   GRANT ALL PRIVILEGES ON DATABASE mydatabase TO myuser;
+   CREATE USER crescentp WITH ENCRYPTED PASSWORD 'yourhonor';
+   GRANT ALL PRIVILEGES ON DATABASE OGS_DB TO crescentp;
    ```
 
 3. **Configure remote access (optional)**:

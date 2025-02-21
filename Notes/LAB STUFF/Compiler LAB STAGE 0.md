@@ -113,7 +113,7 @@ int main()
 ### yyfunctions
 	1) yylex
 		- yylex() has return type int.
-		- LEX automatically definex yylex() in lex.yy.c but doesn't call it. We have to all it in auxiliary fucntions.
+		- LEX automatically definex yylex() in lex.yy.c but doesn't call it. We have to call it in auxiliary fucntions.
 
 ``` mermaid
  flowchart LR
@@ -334,7 +334,7 @@ INPUT --> |"a.out"| OUTPUT
 
 ## Context Free Grammar
 	Consists of 4 parts
-	1) Terminals (in out case tokens)
+	1) Terminals (in our case tokens)
 	2) Non-Terminals
 	3) Set of P, Productions
 	4) Start variable S
@@ -396,3 +396,49 @@ AUXILIARY FUNCTIONS
 %%
 ```
 
+#####  Rules
+	A rule consists of two parts. A production part and an action part.
+	
+	production_head : production_body {action in C } ;
+	eg: expr : expr '+' expr or expr : expr PLUS expr if '+' was declared in declarations part
+	Head of a production is always a non-terminal. Every symbol in a grammar should appear in the head of atleast a single production.
+	The action part occurs when the body is mathched with a production and a reduction takes place.
+
+##### Auxiliary functions
+		Contains 3 mandatory fucntions. main(), yylex(), yyerror().
+		We can add our own functions as we want.
+###### Left and Right associativity
+
+**Left Associativity (`%left`)**
+
+- Operators are **grouped from left to right**.
+- Example:
+    `a - b - c   // Evaluated as: (a - b) - c`
+- Common **left-associative** operators:
+    - `+`, `-` (addition, subtraction)
+    - `*`, `/` (multiplication, division)
+    - `%` (modulus)
+    - `&`, `|`, `^` (bitwise AND, OR, XOR)
+
+	**Right Associativity (`%right`)**
+
+- Operators are **grouped from right to left**.
+- Example:
+    `a = b = c   // Evaluated as: a = (b = c)`
+- Common **right-associative** operators:
+    - `=` (assignment)
+    - `+=`, `-=`, `*=`, `/=` (compound assignments)
+    - `^` (exponentiation in some languages like Python)
+    - `?:` (ternary conditional)
+##### Conflict
+	A  Shift reduce parser can't parse ambiguous grammar. You need to define the associativity to resolve shift/reduce or reduce/reduce conflicts
+	Now there is conflict of associativity. should + or * be given priority?
+	The precedence of these operators can be specified as shown below:
+
+	%left '+'   /*    '+' is left associative */
+	%left '*'   /*    '*' is left associative and has higher precedence over '+' */
+	Here '*' gets higher precedence over '+' as it has been listed below the '+' operator.
+	
+	%left '+' '-'
+	%left '*' '/'
+	Here '*' and '/' have the same precedence, but both have higher precedence than '+' and '-'.

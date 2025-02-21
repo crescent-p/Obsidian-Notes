@@ -2,7 +2,6 @@
 # OSI Model
 	- 7 layers
 	
-![[Pasted image 20250130222708.png]]
 
 	A device may operate at many levels but in formal terms it is deifined as the highest level it operates.
 
@@ -66,6 +65,17 @@
 | **WAN Connectivity**                  | **Not designed for WAN**; works within a LAN.                             | **Designed for WAN** connections (connects to ISPs via DSL, fiber, etc.).                |
 | **Security Features**                 | Basic ACLs (Access Control Lists).                                        | Advanced security features like **firewall, VPN, NAT, QoS, and deep packet inspection**. |
 	So basically a switch connects together LAN's while a router connects these LAN's to the internet. L3 switches can't be used to connect to the internet because they lack NAT capabilities.  
+
+	Firewall dont have routing capability but have NAT.
+	L3 switches have routing capability but dont have NAT.
+	Routers have both NAT and routing hence making it possible to connect to WAN.
+
+|**Device**|**Routing Capability**|**NAT Capability**|**WAN Access**|**Explanation**|
+|---|---|---|---|---|
+|**Firewall**|❌ Limited or No Routing|✅ Yes|❌ Not for WAN access (unless a **Next-Generation Firewall** with routing and NAT capabilities)|Firewalls are primarily used for **security**, but most **traditional firewalls** don't handle routing. They can perform **NAT** to allow multiple internal devices to share a single public IP, but they don’t typically route traffic to different networks or the internet. **NGFWs** (Next-Generation Firewalls) may have limited routing and NAT, but are not as flexible as dedicated routers.|
+|**L3 Switch**|✅ Yes (Inter-VLAN Routing)|❌ No|❌ Not for WAN access|L3 switches perform **inter-VLAN routing** (routing between different VLANs within a LAN). However, they **don’t handle NAT**, which means they can route traffic within a **local network**, but they cannot provide access to external networks like the WAN (internet) unless paired with a device like a router.|
+|**Router**|✅ Yes|✅ Yes|✅ Yes|**Routers** perform both **routing** and **NAT**. They are designed to route traffic between different networks (e.g., LAN and WAN) and can **translate** private IP addresses to public ones (via NAT). This is what allows **WAN access** (internet) from a local network.|
+
 
 ```lua
                  +---------------------+
