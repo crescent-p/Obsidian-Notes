@@ -49,3 +49,15 @@ sudo hping3 -R -p 22 -a --seqnum <NUM> <server_ip> <client_ip>
 	VM gets a private ip that only host and other VM's can access. VM is not exposed to internet or outside the host.
 ### Internal Network
 	VM can only communicate between other VM's on the host. Host can't communicate with VM.
+	
+	
+# Promiscuous Mode
+    Enables all the network to be seen by a particular machine.
+    Network Adapter Behavior:
+    The virtual network adapter on the VM is configured to capture all packets that pass through the virtual network interface. This means that the VM can "see" not only the traffic intended for it but also all other network traffic that is passing through the same network segment.
+    - Possible in real world
+    - Has to enabled in a NIC. When enabled it will recieve all the traffice in that network.
+# How does promiscous mode work in REAL machines ??
+    - In wifi it is abovious. Capture all packets
+    - in systems using switches and routers this is not possible as the data is forwaded to only intented recepients
+    - in systems using hubs this method would work for capturing packets.
