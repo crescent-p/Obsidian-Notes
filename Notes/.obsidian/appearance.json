@@ -1,9 +1,9 @@
 {
-  "baseFontSize": 22,
+  "baseFontSize": 23,
   "baseFontSizeAction": true,
-  "cssTheme": "",
+  "cssTheme": "Minimal",
   "theme": "system",
-  "textFontFamily": "Calibri,Courier",
-  "interfaceFontFamily": "Calibri",
+  "textFontFamily": "outfit",
+  "interfaceFontFamily": "Futura,Franklin Gothic,slfj",
   "accentColor": "#00fffb"
 }

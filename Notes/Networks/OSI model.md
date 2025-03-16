@@ -20,7 +20,7 @@ The OSI (Open Systems Interconnection) model is a conceptual framework used to u
 4. **Transport Layer (Layer 4)**
    - **Function**: Provides end-to-end communication, ensuring data is transferred reliably and accurately. It handles error correction, data flow control, and segmentation.
    - **Components**: None specifically, as it is a layer within the host devices.
-   - **Protocols**: [[TCP]] (Transmission Control Protocol), [[UDP]] User Datagram Protocol).
+   - **Protocols**: [[Networks/TCP]] (Transmission Control Protocol), [[UDP]] User Datagram Protocol).
 
 5. **Session Layer (Layer 5)**
    - **Function**: Manages sessions or connections between applications. It handles the establishment, maintenance, and termination of communication sessions.

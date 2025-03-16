@@ -22,7 +22,7 @@
   - Ports allow a single IP address to support multiple communication sessions simultaneously. Each session is identified by a unique combination of [[IP]] address and port number.
 
 - **Transport Layer Protocols:**
-  - Port numbers are used by transport layer protocols like [[TCP]] (Transmission Control Protocol) and UDP (User Datagram Protocol) to direct traffic to the appropriate application.
+  - Port numbers are used by transport layer protocols like [[Networks/TCP]] (Transmission Control Protocol) and UDP (User Datagram Protocol) to direct traffic to the appropriate application.
   - TCP is connection-oriented and ensures reliable data transfer.
   - [[UDP]] is connectionless and faster but does not guarantee delivery.
 

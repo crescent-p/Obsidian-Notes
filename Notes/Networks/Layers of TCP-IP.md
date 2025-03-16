@@ -43,6 +43,6 @@ The TCP/IP model is often compared to the OSI (Open Systems Interconnection) mod
 - **Internet Layer:** Corresponds to the OSI model's Network layer.
 - **Link Layer:** Corresponds to the OSI model's Data Link and Physical layers.
 
-The [[TCP]]/[[IP]] model is more practical and widely used in real-world networking, especially on the Internet, while the OSI model is more of a theoretical framework.
+The [[Networks/TCP]]/[[IP]] model is more practical and widely used in real-world networking, especially on the Internet, while the OSI model is more of a theoretical framework.
 ![[Pasted image 20240717105714.png]]
 ![[Pasted image 20240717111652.png]]

@@ -1,4 +1,3 @@
-
 # Lexical Analysis
 	Reads stream of characters and groups them into meaningful units called lexems or lexical units. Corresponding to each lexeme it returns a token to the parser.
 		A Token is an entity composed of a name and an optional attribute.
@@ -288,6 +287,325 @@ $$FIRST(C) = {q}$$
 	Goto({S → L. = R}, =)
 	is {S → L = .R, R → .num}
 
-# Semantic Analysis
-	Semantic analysis is about the actual meaning. It's a step after parsing where we assign each token a specific category or value. For example an integer or a string.
 
+# Attribute Evaluation
+## SDD (syntax directed definition)
+	A notation for specifying syntax direction translation
+	- context free grammar together with attributes and rules
+	- 'attributes' associated with each grammar symbol
+		- X.a denotes the value of a associated with X
+		- attributes can be numbers, strings, boolean, types etc
+	- rules associated with each production. Attribute values are computed as per the rules.
+	- attribute values are obtained during lexical analysis
+
+![[Pasted image 20250312201759.png]]
+### Attribute evaluation
+	- build a parse tree, visit the nodes of the tree and compute the attribute values
+	- evaluate the attributes during parsing, without explicity building a parse tree.
+### Order of evaluation
+	- If a syntax tree is build. Then the order of evalution should be a topological order.
+	- for a synthesized attribute dependency edges goes from child to parent
+		- meaning their type is found from the child. It flows upward
+	- for an inherited attribute, dependency edges goes from parent to child or from sibling to sibling 
+		- computed from parent nodes and flows downward
+
+```C
+/ addType(id.entry, T.type) -- What does this mean?
+	- id.entry a pointer to an entry in the symbol table.
+	- T.type represents the type of a variable
+	- addType means to update the symbol table of id.entry to the type of T.type.
+```
+### Types of SDD
+	1) S-attributed SDD :- involves only synthesized attributes
+	2) L-attributed SDD :- attributes can be synthesized or inherited
+		- added restriction that dependency graph edges between attributes of symbols in a producation body go from left to right
+#### L-attributed SDD
+	- Synthesize or
+	- inherited
+# Semantic Analysis
+	- Semantic analysis is about the actual meaning. It's a step after parsing where we assign each token a specific category or value. For example an integer or a string. Does type checking, statics checking, and type conversions that can't be done by the syntax analyzer
+	- Syntax analysis check if the program is syntatically valid and reports syntax errors.
+	- type errors like following can't be found in syntax analysis stage
+		- divide by zero
+		- type mismatch
+		- variable used without declaration
+## Static checks
+	Errors that can be check statically
+		- type mismatch
+		- variable used without declaration
+		- check like array out of bounds require dynamic checking
+## Symbol table
+	- a data structure that stores information regarding the source program
+	- one entry for each variable, constant, functions, labels with values of its attributes.
+	- stores information collected during early stage of analysis, that will be required during later stages
+	- possible attributes
+		- variable name
+			- type, scope, binding, name
+		- function name
+			- number of arguments, name, name and type of each argument, the method of passing each argument, return type.
+### Symbol table management
+	- Lexicaly analyzer
+		- creates a symbol table entry for each identifier
+		- token returned : <id entry, pointer to table entry
+
+values are not stored in symbol table
+
+| Name | Type  | ... |
+| ---- | ----- | --- |
+| x    | int   | ... |
+| y    | float | ... |
+![[Pasted image 20250313233735.png]]![[Pasted image 20250313234223.png]]
+
+## Implementing Scope
+	Scope of a declaration of a variable x is the portion of the program in which uses of x refer to this declaration.
+	- static scope (C, java)
+	- dynamic scope (determined at runtime)
+### Block structured languages
+	- a block is a grouping of declarations and statements
+	- The scope of a variable x that is declared in block B is the entirety of block B except for nested blocks within B that redeclare x
+
+## Type Checking
+	Type: 
+		- a set {} of values (domain of values)
+		- a set of operations on these values
+	Type checking: checks if the type of the operand matches the type expected by an operator.
+
+![[Pasted image 20250314134012.png]]
+## Type System
+	A set of types and set of typing rules to assign types to various language constructs.
+~ Question
+	For the following C code fragment, indicate the type of the identifiers, a, b, c, f, and student:
+```C 
+	int a; float b; int c[10]; int f( int x, float y); struct student{int num; float marks;} 
+	```
+```Ruby
+	a : data type : int
+	b : data type : float
+	c : data type : array of int
+	f : return type : int 
+		first parameter  : int x
+		second parameter : float y
+	student : data type : struct student 
+```
+
+	array(10, int)  :  an array of size 10 with base type int
+	boolean f(int x)  :  int --> boolean is the type of f
+	boolean f(int k, int q)  :  int x int --> boolean
+
+### Type expression
+	A type expression is used to denote the type of a language construct. 
+	For example : 
+	- a basic type like int, boolean, char, void, type_error(to signal error during type checking)
+	- a type name
+		- These are identifiers that represent specific types defined in the programming language.
+	- a type constructor applied to appropriate arguments
+		- Array types: int[] or Array<int>
+		- Function types: (int, float) -> boolean
+		- Struct or record types: struct { x: int, y: float }
+
+### Type constructors
+	- array(I, t) : the type constructor array applied to a number I and a type t
+	- s -> t : the type constructor -> applied to type expression s and t, denotes the type of funcations with input s and return type t
+	- s x t : type denoting list, tuple of types.
+	- pointer(t) : dentoes the type of a pointer to an object with type t
+	- record((l1 × t1) × (l2 × t2)): the type constructor record applied to a list of (label, type) pairs, denoting the type of a record
+
+![[Pasted image 20250314145327.png]]
+![[Pasted image 20250314145320.png]]
+### Type conversions
+	- implicit
+		- adding and int and a float results in a float
+	- explicit
+		- casts in C
+
+![[Pasted image 20250314145842.png]]
+
+What is lvalue?
+	short for left value. They represent the memory location and can appear on the left side of an assignment operator.
+# Intermediate Representation
+	The front end of the compiler produces an intermediate representation of the source program. 
+		1) abstract syntax tree
+			1) represents hierarchial syntatic structure of the source program.
+			2) condensed form of parse tree. With variable names dropped or replaced by operators
+			3) each construct is made of an operator node with sub trees corresponding to the semantically meaningful components of the construct
+	
+![[Pasted image 20250315132305.png]]		
+			
+			4) three address code
+				1) instructions of the form a = b op c (1 address for the result and two for the operands)
+				2) at most one operator on the right side of the instruction
+				3) temporary names may be generated and used by the compiler to split a signle instructions to parts
+					1) an address in a 3 address code can be
+						1) a name in the source program
+						2) a constant
+						3) a compiler generated temporary
+				4) instructions for altering flow of control.
+				5) 
+			5) DAG (directed acyclic graph) for expressions
+			6) static single assignment form
+
+![[Pasted image 20250315141701.png]]
+
+	slist -> slist stmt | ϵ
+		here slist is a right recursive structure.
+		stmt is a placeholder for ifelse, while etc. 
+		epsilon is the base case, acting as termination condition for recursion.
+
+```text
+if (...) { ... }  
+while (...) { ... }
+
+seq
+├── seq
+│   ├── seq
+│   │   ├── null (ϵ)
+│   │   └── if-statement
+│   └── while-statement
+| //rest of the code
+```
+
+
+## 3 address code generation
+```text
+x = a + b ∗ c 
+	is converted to
+t1 = b * c
+t2 = a + t1
+x = t2
+where t1 and t2 are computer genrated temporaries
+```
+	Common instructions
+	 - x = y op x
+	 - x = op y where op is an unary operator
+	 - copy instructions of the form x = y
+	 - goto L; an unconditional jump
+	 - if x goto L
+	 - if x relop y goto L
+	 - if False x goto L; if x is False goto L
+```ruby
+if (a < b) small = a else small = b . . .
+
+converted into -> 
+	if a < b goto L1
+	goto L2
+L1: small=a
+	goto L3
+L2: small=b
+L3: . . .
+```
+
+### Procedure calls
+	- a procedure call is a type of call that transfers control from current program to a specfic procedure allowing the execution of a defined set of instructions. 
+	- procedure calls are broken as follow
+		- p(arg1, arg2, arg3, ... , argn);
+		- param arg1
+		- param arg2
+		- param arg3
+		- ...
+		- call p, n
+	- call p, n triggers the procedure p where n is the number of arguments
+		- return y
+		- is called to return the control back to the orgianal program and assigns value y to the caller.
+#### Array addressing
+    `x[i] = y` (store `y` into index `i` of `x`):
+```text
+    t = x + i  ; Calculate address offset   *t = y     ; Store value
+```
+  - Three address code has 4 parts. 
+	  - op - code for operator
+	  - arg1
+	  - arg2
+	  - result
+
+## DAG for Expressions
+	- graph nodes corresponding to operands and operators
+	- common operand nodes (representing subexpressions) are not replicated
+	- can identify common subexpressions
+
+ - Take (a + b) * (a + b)
+						![[Pasted image 20250315153855.png]]
+Here a + b is represented only once and used twice. Reducing redundancy.
+
+ - a + a * b
+						![[Pasted image 20250315153930.png]]
+
+
+## Static Single Assignment (SSA) Form
+	- all assignments are to variables with distinct names
+	- SSA facilitates code optimizations
+	- definition of same variables are changed to different variables.
+		- x = a + b
+		- x = p + q
+			- is changed to 
+		- x1 = a + b
+		- x2 = p + q
+	- Use of ϕ functions
+		- this function automatically finds the control flow and assigns the appropriate variable
+
+```python
+if (. . .) x = 1 else x = 2;
+y = x;
+	represented in SSA as:
+if (. . .) x1 = 1 else x2 = 2;
+x3 = ϕ(x1, x2);
+y = x3;
+```
+
+# 3 Address code generation
+![[Pasted image 20250316102802.png]]
+
+	- E.addr represents the memory addr that will hold E (it can be a name, a constant or a computer generated temporary)
+	- E.code represents the 3 addr code for E
+	- id.entry points to the symbol table entry for id
+	- newTemp() returns a distinct new temporary name
+	- gen() returns a generated 3 addr code. The qouted values stay the same and others are converted to its values
+
+																		
+![[Pasted image 20250316103833.png]]
+==Concatenating E1.code and E2.code to the front of E.code ensures that E1.code and E2.code are executed before E.code is executed.==
+==E1 and E2 are evaluated and stored in temporary variables like E1.addr and E2.addr. This also avoids register conflicts when there are multiple expressions==
+
+## Booleans and Conditional operators
+
+```
+if (a < b) small = a else small = b
+
+IS CONVERTED TO ....
+	if a < b goto L1
+		goto L2
+	L1: small=a
+		goto L3
+	L2: small=b
+	L3:
+```
+![[Pasted image 20250316111229.png]]
+	B.True and B.False are labels
+	So it should have B.True = newLabel() and B.False = newLable()
+![[Pasted image 20250316111628.png]]
+	newLabel() returns a new unique temporary name
+	S.next : address or label of the instructions that should follow immediately
+	label(L) : attaches a label to the next 3 address code that should be generated.
+			here label(B.true) is attached to S1.code
+			Also S.code contains the jump instruction to go to either B.true or B.false
+
+![[Pasted image 20250316114114.png]]
+
+### Short circuit evaluation semantics
+	- in B1 || B2 if B1 evalutes to true then there is no need to evaluate B2
+	- Complete evalutation semantics evaluates both
+	- in short circuit code the boolean operators (< || &&) are converted to jump operations. The operators don't appear in the code.
+
+```C
+if (x < y && x < z ) then S1 else S2:
+
+
+	if x < y goto L1
+	goto L3
+	L1: if x < z goto L2
+	goto L3
+	L2 : S1
+	goto L4
+	L3 : S2
+	L4 :
+
+```

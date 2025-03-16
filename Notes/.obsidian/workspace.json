@@ -13,12 +13,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CompTIA/Introduction to network devices.md",
+                "file": "Compiler Theory/Notes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Introduction to network devices"
+              "title": "Notes"
+            }
+          },
+          {
+            "id": "6aea795ee7d84675",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.9"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.9"
             }
           },
           {
@@ -27,16 +39,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "FastAPi/Alembic.md",
+                "file": "Networks/Firewalls.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Alembic"
+              "title": "Firewalls"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -68,8 +79,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "alembic",
-                "matchingCase": false,
+                "query": "",
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -89,8 +100,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -156,13 +166,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "FastAPi/Alembic.md",
+                "file": "Compiler Theory/Notes.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Alembic"
+              "title": "Outline of Notes"
             }
           },
           {
@@ -195,44 +205,45 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "6f411cac7b68e440",
+  "active": "2c8e5d64c322237a",
   "lastOpenFiles": [
+    "Pasted image 20250316114114.png",
+    "Pasted image 20250316111628.png",
+    "Pasted image 20250316111229.png",
+    "Pasted image 20250316103833.png",
+    "Pasted image 20250316102802.png",
+    "Pasted image 20250315153930.png",
+    "Pasted image 20250315153855.png",
+    "Pasted image 20250315141701.png",
+    "Pasted image 20250315132305.png",
+    "Pasted image 20250314145842.png",
+    "Pasted image 20250314145840.png",
+    "Finance App Roadmap.md",
+    "Networks/Firewalls.md",
+    "Untitled.canvas",
+    "Tell Me about yourself.md",
+    "SOLID.md",
     "FastAPi/Uploading to git.md",
-    "System Design/Introduction.md",
     "FastAPi/Docker.md",
+    "FastAPi/Alembic.md",
+    "LAB STUFF/Computer Networks TCP assignment II.md",
+    "LAB STUFF/Computer Networks TCP assignment.md",
+    "LAB STUFF/TCP.md",
+    "Networks/API.md",
+    "CompTIA/Introduction to network devices.md",
+    "Networks/IP.md",
+    "Networks/HTTP.md",
+    "Networks/Network Tools.md",
+    "FastAPi/Activating Virtual env in python.md",
+    "FastAPi/Creating a Service in VM.md",
+    "Linux Driver/Driver Implementation.md",
+    "System Design/Introduction.md",
     "FastAPi/Setting up a VM.md",
     "Database Managment/mysql.md",
     "Library Management System.md",
     "FastAPi/SSHing into azure.md",
     "FastAPi/System Environments.md",
     "Where is my bus/Setup.md",
-    "FastAPi/Activating Virtual env in python.md",
-    "FastAPi/fastApi.md",
-    "FastAPi/How to make changes to your test code and push to prod.md",
-    "LAB STUFF/Computer Networks TCP assignment.md",
-    "System Design/Designing Tinder.md",
-    "System Design/Designing Whatsapp.md",
-    "FastAPi/Setting up POSTGRESS in wsl.md",
-    "FastAPi/Postgress.md",
-    "LAB STUFF/Compiler LAB STAGE 0.md",
-    "Compiler Theory/Notes.md",
-    "CompTIA/Application Layer.md",
-    "CompTIA/Introduction to network devices.md",
-    "System Design/WebSockets.md",
-    "Useless Notes/EE Notes.md",
-    "Networks/API.md",
-    "Network Attacks/DoS.md",
-    "Networks/To learn.md",
-    "Pasted image 20250203223405.png",
-    "Pasted image 20250203195710.png",
-    "Pasted image 20250203181056.png",
-    "Pasted image 20240722203051.png",
-    "Pasted image 20240717184119.png",
-    "Pasted image 20240908174704.png",
-    "Pasted image 20240908174707.png",
-    "Pasted image 20240908174850.png",
-    "Pasted image 20240908175018.png",
-    "Pasted image 20241114022112.png",
     "CompTIA",
     "Compiler Theory",
     "LAB STUFF",
@@ -240,7 +251,6 @@
     "Network Lab",
     "ICPC",
     "Where is my bus",
-    "Untitled.canvas",
     "Linux Driver",
     "React",
     "FastAPi"
