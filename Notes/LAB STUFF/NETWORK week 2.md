@@ -1,4 +1,3 @@
-
 # Socket Programming
 
 ## Layers of Networking
@@ -116,7 +115,7 @@ if((bind(sockfd, (struct sockaddr *) &saddr, sizeof(saddr)) < 0) { // bind!
 ```
 
 	- htons()/ htonl() --> host to network short
-	- htohs()/ htohl() --> network order to host short/long
+	- ntohs()/ ntohl() --> network order to host short/long
 	- byte ordering configuration. little endian, big endian
 	- little endian LSB is stored first
 	- big endian MSB is stored first

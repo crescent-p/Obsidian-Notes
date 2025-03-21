@@ -1,1 +1,9 @@
-{}
+{
+	"nodes":[
+		{"id":"7b7f33f95f647b52","x":37,"y":94,"width":400,"height":400,"color":"3","type":"file","file":"Compiler Theory/Notes.md"},
+		{"id":"cf57c8b079d4a74e","x":-560,"y":160,"width":400,"height":184,"type":"file","file":"Pasted image 20250316102802.png"}
+	],
+	"edges":[
+		{"id":"8ce31d9d90003df6","fromNode":"cf57c8b079d4a74e","fromSide":"top","toNode":"7b7f33f95f647b52","toSide":"top"}
+	]
+}

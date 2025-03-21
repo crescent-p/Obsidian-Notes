@@ -302,7 +302,7 @@ $$FIRST(C) = {q}$$
 ### Attribute evaluation
 	- build a parse tree, visit the nodes of the tree and compute the attribute values
 	- evaluate the attributes during parsing, without explicity building a parse tree.
-### Order of evaluation
+### Order of evaluation -- Inherited and Synthesized Attributes --
 	- If a syntax tree is build. Then the order of evalution should be a topological order.
 	- for a synthesized attribute dependency edges goes from child to parent
 		- meaning their type is found from the child. It flows upward
@@ -582,6 +582,10 @@ IS CONVERTED TO ....
 	B.True and B.False are labels
 	So it should have B.True = newLabel() and B.False = newLable()
 ![[Pasted image 20250316111628.png]]
+
+==`S.next` defines the **exit label** for a statement block (e.g., where to jump after the block completes)==
+
+
 	newLabel() returns a new unique temporary name
 	S.next : address or label of the instructions that should follow immediately
 	label(L) : attaches a label to the next 3 address code that should be generated.
@@ -609,3 +613,44 @@ if (x < y && x < z ) then S1 else S2:
 	L4 :
 
 ```
+
+![[Pasted image 20250316133500.png]]
+
+### While loop 3 address code
+```
+while (i < 10) i = i + 1:
+
+	L1: if i < 10 goto L2
+	goto L3
+	L2: t1 = i + 1
+	i = t1
+	goto L1
+	L3 :
+```
+
+![[Pasted image 20250316150956.png]]
+
+### What are programs?
+
+	Program: A structured sequence of code blocks with control flow (e.g., loops, conditionals) and labels, forming a complete executable unit.
+	Example:
+```text
+L1: if x < y goto L2  
+	goto L3  
+L2: small = x  
+	goto L4  
+L3: small = y  
+L4:  
+```
+	
+	The attributes B.true, B.false and S.next are inherited.
+	Generated code will contain jump instructions with target
+	labels unspecified.
+	A second pass will be required for binding labels to addresses
+
+## Backpatching
+	- a techinque that is used to generate code and assign label address in a single pass.
+	- A list is kept of B.truelist, B.falselist and S.nextList.
+	- when the actual value if found the list is used to update the target labels in the instructions.
+	- S is statement aka a sequence of statements or a block of code
+	- B is boolean

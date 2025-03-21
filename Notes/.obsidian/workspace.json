@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Compiler Theory/Notes.md",
+                "file": "GenAI/Vector Search with LLM's.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Notes"
+              "title": "Vector Search with LLM's"
             }
           },
           {
@@ -39,15 +39,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Networks/Firewalls.md",
+                "file": "Useless Notes/Software Engineering.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Firewalls"
+              "title": "Software Engineering"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -120,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "FastAPi/SSHing into azure.md",
+                "file": "Useless Notes/Software Engineering.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,7 +131,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for SSHing into azure"
+              "title": "Backlinks for Software Engineering"
             }
           },
           {
@@ -139,12 +140,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "FastAPi/SSHing into azure.md",
+                "file": "Useless Notes/Software Engineering.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from SSHing into azure"
+              "title": "Outgoing links from Software Engineering"
             }
           },
           {
@@ -154,7 +155,9 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-tags",
               "title": "Tags"
@@ -166,13 +169,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Compiler Theory/Notes.md",
+                "file": "Useless Notes/Software Engineering.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Notes"
+              "title": "Outline of Software Engineering"
             }
           },
           {
@@ -190,7 +193,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 308.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -205,45 +208,45 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "2c8e5d64c322237a",
+  "active": "db95b57073a91a42",
   "lastOpenFiles": [
+    "Useless Notes/Software Engineering.md",
+    "Useless Notes/Design and Analysis of Algorithms.md",
+    "Pasted image 20250321114610.png",
+    "Pasted image 20250321113214.png",
+    "Pasted image 20250321110418.png",
+    "Pasted image 20250320212616.png",
+    "Networks/Firewalls.md",
+    "GenAI/Vector Search with LLM's.md",
+    "Python backend Development/Django.md",
+    "FastAPi/Activating Virtual env in python.md",
+    "GenAI",
+    "Network Attacks/Types of Intrusions.md",
+    "FastAPi/Alembic.md",
+    "Networks/API.md",
+    "Networks/ARP.md",
+    "FastAPi/Creating a Service in VM.md",
+    "LAB STUFF/NETWORK week 2.md",
+    "LAB STUFF/NETWORK Week 1.md",
+    "LAB STUFF/Compiler LAB STAGE 0.md",
+    "Compiler Theory/Notes.md",
+    "Pasted image 20250316150956.png",
+    "SOLID.md",
+    "Untitled.canvas",
+    "Pasted image 20250316133502.png",
+    "Pasted image 20250316133500.png",
+    "Pasted image 20250316133459.png",
     "Pasted image 20250316114114.png",
     "Pasted image 20250316111628.png",
-    "Pasted image 20250316111229.png",
-    "Pasted image 20250316103833.png",
-    "Pasted image 20250316102802.png",
-    "Pasted image 20250315153930.png",
-    "Pasted image 20250315153855.png",
-    "Pasted image 20250315141701.png",
-    "Pasted image 20250315132305.png",
-    "Pasted image 20250314145842.png",
-    "Pasted image 20250314145840.png",
     "Finance App Roadmap.md",
-    "Networks/Firewalls.md",
-    "Untitled.canvas",
     "Tell Me about yourself.md",
-    "SOLID.md",
     "FastAPi/Uploading to git.md",
     "FastAPi/Docker.md",
-    "FastAPi/Alembic.md",
     "LAB STUFF/Computer Networks TCP assignment II.md",
     "LAB STUFF/Computer Networks TCP assignment.md",
     "LAB STUFF/TCP.md",
-    "Networks/API.md",
     "CompTIA/Introduction to network devices.md",
     "Networks/IP.md",
-    "Networks/HTTP.md",
-    "Networks/Network Tools.md",
-    "FastAPi/Activating Virtual env in python.md",
-    "FastAPi/Creating a Service in VM.md",
-    "Linux Driver/Driver Implementation.md",
-    "System Design/Introduction.md",
-    "FastAPi/Setting up a VM.md",
-    "Database Managment/mysql.md",
-    "Library Management System.md",
-    "FastAPi/SSHing into azure.md",
-    "FastAPi/System Environments.md",
-    "Where is my bus/Setup.md",
     "CompTIA",
     "Compiler Theory",
     "LAB STUFF",
@@ -252,7 +255,6 @@
     "ICPC",
     "Where is my bus",
     "Linux Driver",
-    "React",
-    "FastAPi"
+    "React"
   ]
 }
