@@ -31,7 +31,7 @@ collection = db.movies
 		- verify email and copy access token
 ```python
 //Using hugginface API to generate a vector
-hf_tokne = "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"
+hf_tokne = "tokens"
 embedding_url = "https://api-inference.huggingface.co/pipeline/feature-extraction/sentence-transformers/all-MiniLM-L6-v2"
 
 
