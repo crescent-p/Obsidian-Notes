@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LAB STUFF/VLAN Routing Assignment (need correction, wrong network diagram used).md",
+                "file": "GenAI/Vector Search with LLM's.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "VLAN Routing Assignment (need correction, wrong network diagram used)"
+              "title": "Vector Search with LLM's"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LAB STUFF/VLAN Routing Assignment (need correction, wrong network diagram used).md",
+                "file": "GenAI/Vector Search with LLM's.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of VLAN Routing Assignment (need correction, wrong network diagram used)"
+              "title": "Outline of Vector Search with LLM's"
             }
           },
           {
@@ -183,6 +183,8 @@
   },
   "active": "ab12eeb9eaf1d657",
   "lastOpenFiles": [
+    "LAB STUFF/VLAN Routing Assignment (need correction, wrong network diagram used).md",
+    "DBMS theory/DBMS.md",
     "Pasted image 20250327204419.png",
     "Pasted image 20250327203940.png",
     "Pasted image 20250327203226.png",
@@ -193,7 +195,6 @@
     "Pasted image 20250326172858.png",
     "Pasted image 20250326172849.png",
     "Pasted image 20250326172838.png",
-    "Pasted image 20250326151348.png",
     "Networks/SSL TLS.md",
     "Networks/REST API.md",
     "Networks/API.md",
@@ -204,7 +205,6 @@
     "CompTIA/Application Layer.md",
     "Database Managment/Functions in MySql.md",
     "Database Managment/mysql.md",
-    "DBMS theory/DBMS.md",
     "DBMS theory/Commands.md",
     "DBMS theory/Clustered vs Non clustered.md",
     "Essentials/Vim.md",
@@ -216,7 +216,6 @@
     "ICPC/Graph Theory.md",
     "ICPC/Dynamic Programming.md",
     "ICPC/Bitmasking.md",
-    "LAB STUFF/VLAN Routing Assignment (need correction, wrong network diagram used).md",
     "LAB STUFF/OPEN ELECTIVE.md",
     "LAB STUFF/NETWORK Week 1.md",
     "GenAI",
