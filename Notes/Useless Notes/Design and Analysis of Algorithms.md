@@ -40,6 +40,7 @@
 
 ![[Pasted image 20250320212616.png]]
 ## P Class
+	- P is the class of languages that are decidable in polynomial time on a deterministic single tape turing machine.
 	These are decision problems. Problems that a yes/no solution.
 	- Solution to P problems are easy to find
 	- P is often a class of computational problems that are solvable and tractable
@@ -52,6 +53,35 @@
 	 - But given a solution it is easy to verify it in polynomial time.
 	- A non deterministic machine can guess the answers and the results of the gusses can be called a certificate
 	- Eg: SAT, Hamiltonian Path Problem, Graph colouring
+
+### Examples of NP problems
+	1) Clique
+		- A clique in an undirected graph is a subgraph wherein every two nodes are connected by an edge aka complete graph. A k clique is a graph with k nodes.
+		- CLIQUE = {⟨G, k⟩| G is an undirected graph with a k-clique}.
+			- PROOF IDEA :  The clique is the certificate
+			- PROOF : 
+			-  ON INPUT ⟨⟨G, k⟩, c⟩: Graph G with clique k and subgraph c
+				- test whether c is a subgraph in G
+				- check whether there are edges connecting all the nodes in c in G
+				- if both passes it is a clique
+			- all these steps are polynomial time verifiable
+		- SUBSET SUM
+			- Given a collection of numbers and a target k, We want to determine whether there exits a subcollection that adds up to k.
+			- SUBSET-SUM = { ⟨S, t⟩ | S = {x1, x2, x3, ... , xk} and for some {y1, y2, y3} ⊆ {x1,...,xk}, we have Σyi = t}}, these are considered to be multisets so they allow repetition
+			- SUBSET-SUM is NP
+				- PROOF IDEA : the subset is the certificate c
+				- PROOF:
+					- On input ⟨⟨S, t⟩, c⟩:
+					  - check if {y1, y2, y3} a subset of {x1, x2, x3...}
+					  - check if Σyi = t
+				- ALTERNATE PROOF
+					- We can prove it is NP by providing a non-deterministic TM that solves this problem
+					- on INPUT <G,t>
+						- non-deterministically select a subset of numbers c from G
+						- check if c sums up to t
+						- if YES accept else REJECT
+
+![[Pasted image 20250322135712.png]]
 ## Co-NP 
 	The set of problems whose solution can be discarded in polynomial time.
 	- If a problem X is in NP then its complement X` is also in Co-NP
@@ -67,6 +97,8 @@ The intersection of NP and NP-Hard is NP-complete
 	- 
 
 ## NP-Complete
+	An NP complete problem is related to the whole class on NP problems. It any problem in NP requires more than polynomial time complexity, then an NP-complete problem also requires it. It a single NP-complete problem can be solved in polynomial time, then the whole class of NP can be solved in poynomial time.
+	
 	- If x is in NP
 	- If x is NP-Hard
 	- How to prove X is NP-Complete
@@ -74,6 +106,20 @@ The intersection of NP and NP-Hard is NP-complete
 			- give a non-deterministic poly time algorithm
 			- give a certificate + verifier
 		- reduce a NP-complete problem Y to X 
+### Verifier
+	A verifier for a problem A is an algorithm V, such that 
+		A = {w | V accepts {w, c} for some solution c}, The solution c is called a certificate or proof.
+
+## SAT
+	satisfiability problem.
+	SAT = {⟨φ⟩| φ is a satisfiable Boolean formula}.
+
+### Polynomial time reducibility
+	When a problem A can be reduced to problem B in polynomial time. The solution of B can be used to solve problem A.
+	- A fucntion f : Σ∗−→Σ∗ is a polynomial time computable function if there exists a TM that can comput with just w on its starting tape and end up with f(w)
+	- A problem A is polynomial time reducible to language B written as A ≤P B, if a polynomial time computable function exists for which 
+			w ε A <=> f(w) ε B 
+
 ## 3SAT
 	literal -> variable
 	clause -> x OR y OR z (3 literals with an OR)
@@ -142,3 +188,10 @@ $example :$
 	- Asymptotic upper bound aka Big O notation.
 		- We say f(n) = O(g(n)) if f(n) <= c * g(n)
 	- We can think of O() as suppressed constant
+	- Asymptotic lowe boudn aka small o notation
+		- we say f(n) = o(g(n)) when lm f(n)/g(n) -> 0
+		- a number n0 exists for which f(n) < cg(n) for all n >= n0
+	- f(n) != o(f(n))
+	- in short the complexity has to higher asymptotically, like (n^3 = o(n ^ 4) or o(n^3 * log(n)))
+	- O() is >= while o() is >
+	

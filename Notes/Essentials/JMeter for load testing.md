@@ -18,7 +18,7 @@
 	eg: .\jmeter -n -t \Users\cresc\Desktop\JMeter\backups\request1.jmx -l C:\Users\cresc\Desktop\JMeter\backups\loading.csv
 
 
-```
+```mermaid
 flowchart LR
     subgraph Frontend
         A[React + Vite Client]

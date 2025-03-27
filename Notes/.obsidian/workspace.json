@@ -4,51 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "f2f44491c5b0af9e",
+        "id": "d9c4ae32d1fe3ea4",
         "type": "tabs",
         "children": [
           {
-            "id": "2c8e5d64c322237a",
+            "id": "ab12eeb9eaf1d657",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GenAI/Vector Search with LLM's.md",
+                "file": "LAB STUFF/VLAN Routing Assignment (need correction, wrong network diagram used).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Vector Search with LLM's"
-            }
-          },
-          {
-            "id": "6aea795ee7d84675",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.8.9"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.8.9"
-            }
-          },
-          {
-            "id": "7ab9ac0a27f709ac",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Useless Notes/Software Engineering.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Software Engineering"
+              "title": "VLAN Routing Assignment (need correction, wrong network diagram used)"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -121,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Useless Notes/Software Engineering.md",
+                "file": "LAB STUFF/VLAN Routing Assignment.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Software Engineering"
+              "title": "Backlinks for VLAN Routing Assignment"
             }
           },
           {
@@ -140,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Useless Notes/Software Engineering.md",
+                "file": "LAB STUFF/VLAN Routing Assignment.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Software Engineering"
+              "title": "Outgoing links from VLAN Routing Assignment"
             }
           },
           {
@@ -169,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Useless Notes/Software Engineering.md",
+                "file": "LAB STUFF/VLAN Routing Assignment (need correction, wrong network diagram used).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Software Engineering"
+              "title": "Outline of VLAN Routing Assignment (need correction, wrong network diagram used)"
             }
           },
           {
@@ -208,45 +181,46 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "db95b57073a91a42",
+  "active": "ab12eeb9eaf1d657",
   "lastOpenFiles": [
-    "Useless Notes/Software Engineering.md",
-    "Useless Notes/Design and Analysis of Algorithms.md",
-    "Pasted image 20250321114610.png",
-    "Pasted image 20250321113214.png",
-    "Pasted image 20250321110418.png",
-    "Pasted image 20250320212616.png",
-    "Networks/Firewalls.md",
-    "GenAI/Vector Search with LLM's.md",
-    "Python backend Development/Django.md",
-    "FastAPi/Activating Virtual env in python.md",
-    "GenAI",
-    "Network Attacks/Types of Intrusions.md",
-    "FastAPi/Alembic.md",
+    "Pasted image 20250327204419.png",
+    "Pasted image 20250327203940.png",
+    "Pasted image 20250327203226.png",
+    "Pasted image 20250327201715.png",
+    "Pasted image 20250327201503.png",
+    "Pasted image 20250327201455.png",
+    "Pasted image 20250327201156.png",
+    "Pasted image 20250326172858.png",
+    "Pasted image 20250326172849.png",
+    "Pasted image 20250326172838.png",
+    "Pasted image 20250326151348.png",
+    "Networks/SSL TLS.md",
+    "Networks/REST API.md",
     "Networks/API.md",
-    "Networks/ARP.md",
-    "FastAPi/Creating a Service in VM.md",
-    "LAB STUFF/NETWORK week 2.md",
-    "LAB STUFF/NETWORK Week 1.md",
-    "LAB STUFF/Compiler LAB STAGE 0.md",
-    "Compiler Theory/Notes.md",
-    "Pasted image 20250316150956.png",
-    "SOLID.md",
-    "Untitled.canvas",
-    "Pasted image 20250316133502.png",
-    "Pasted image 20250316133500.png",
-    "Pasted image 20250316133459.png",
-    "Pasted image 20250316114114.png",
-    "Pasted image 20250316111628.png",
-    "Finance App Roadmap.md",
-    "Tell Me about yourself.md",
-    "FastAPi/Uploading to git.md",
-    "FastAPi/Docker.md",
-    "LAB STUFF/Computer Networks TCP assignment II.md",
-    "LAB STUFF/Computer Networks TCP assignment.md",
-    "LAB STUFF/TCP.md",
+    "Networks/cookies.md",
+    "Networks/Difference between IPv4 and IPv6.md",
+    "Networks/Firewalls.md",
     "CompTIA/Introduction to network devices.md",
-    "Networks/IP.md",
+    "CompTIA/Application Layer.md",
+    "Database Managment/Functions in MySql.md",
+    "Database Managment/mysql.md",
+    "DBMS theory/DBMS.md",
+    "DBMS theory/Commands.md",
+    "DBMS theory/Clustered vs Non clustered.md",
+    "Essentials/Vim.md",
+    "Essentials/JMeter for load testing.md",
+    "GenAI/Vector Search with LLM's.md",
+    "ICPC/Stack.md",
+    "ICPC/Sliding Window.md",
+    "ICPC/Point update range sum queries.md",
+    "ICPC/Graph Theory.md",
+    "ICPC/Dynamic Programming.md",
+    "ICPC/Bitmasking.md",
+    "LAB STUFF/VLAN Routing Assignment (need correction, wrong network diagram used).md",
+    "LAB STUFF/OPEN ELECTIVE.md",
+    "LAB STUFF/NETWORK Week 1.md",
+    "GenAI",
+    "Untitled.canvas",
     "CompTIA",
     "Compiler Theory",
     "LAB STUFF",

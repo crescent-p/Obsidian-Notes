@@ -1,6 +1,7 @@
 
 	1) IF you have to pick something but if you pick in a certaing range you lose something. Then give +1 and -1 to objects and do a maximum subarraysum to get optimal choice.
-	Increasing Frequency: `https://codeforces.com/problemset/problem/1082/E`
+
+Increasing Frequency: https://codeforces.com/problemset/problem/1082/E
 
 	2) 
 
