@@ -425,6 +425,109 @@ A manager is someone who carries out the management process within an organizati
 		- motivation
 		- initiate action
 
-## Theories of motivation
-	- content theories
-		-
+## Intellectual Property Rights
+	- Intellectual 
+		- realting to intellecut, ability to think and understand ideas
+	- Property
+		- a thing or things belonging to someone
+	- Rights
+		- a moral or legal entitlement to do something or prevent others from doing something
+	
+	- What is intellectual property?
+		- Intellectual property refers to creations of the human mind protected by law.
+		- like physical propery intellectual property(IP) gives ownership of ideas and creations
+		- example include : designs, logos, trade secrets, artistic designs, inventions
+		
+	- Why is intellectual property important?
+		- It encourages innovations and creativity : creators benefit from their work.
+		- Drives ecnomic growth
+		- Stops misuse of inventions : prevents unauthorized use of creations
+		- Fosters development : Protects traditional knowledge and drives advancement
+		
+	- Types of intellectual property
+		- Patents : protects inventions that are new, innovative and industrially applicable
+		- Copyrights : protect creative works like boosk, movies, songs and software. (also the related rights)
+		- Trademarks : protect logos, names and designs that identify brands
+		- Trade Secrets : protect confidential business information (eg: formulas)
+		- Geographical indications : protect products tied to a specific geographical locations
+		- Industrial Design : Protect ornamental/aesthetic aspects of a product
+		- Tradittional Knowledge : protect indigenous knowledge and genetic resources
+
+### Patents
+	- A patent is an exclusive right granted for an invention, which is a product or process, that provides a new way of doing something or offers a new technical solution to an existing problem.
+	- in needs to meet some criteria like novelty, usefullness, non obviousness
+	- it provides protection to the owner of the patent for a period of 20 years
+#### Utility Patents
+	- protects the functionality of new or improved products, processes or machines
+	- ie: for a computer the utility patent would protect how the sytem starts, process information and how it connects to the wifi.
+	- Duration : 20 years
+#### Design Patents
+	- Protect the unique visual design of an item, such as its shape and look
+	- ie: the shape of a mouse or the shape of a coke bottle
+#### Provisional Patents
+	- establish an earling filing date for an invention, which can be beneficial in the patent process
+#### Plant Patents
+	- utility for new variety of plants
+	- Duration : 20 years
+
+### Filing a patent in India
+	1) Check patentablity (ensure the invention is novel and useful)
+	2) Conduct a patent search (verify no similar patents exist)
+	3) Draft the application (include detailed descriptions and claims)
+	4) File the application (Submit to the indian patent office)
+	5) publication (publish in the patent journal after 18 months)
+	6) request examination within first 48 months
+	7) respond to FER  (first examination report)
+	8) Grand of patent (vaild for 20 years appon approval)
+
+
+# Decision making
+1) payoff table
+	1) n * m table with cost of each event
+
+![[Pasted image 20250414194431.png]]
+2) regret table
+	1) Table with expected loss marked
+![[Pasted image 20250414194508.png]]
+## Laplace principle
+	- assume all events to be equally likely
+	
+![[Pasted image 20250414194537.png]]
+## Maximin or Minimax principle
+	- pessimistic approach
+	- choosing the best profit from set of worst profits (maxmin)
+
+![[Pasted image 20250414195301.png]]
+
+## Maximax or   minimin   principle
+	- choose maximum among maximums
+	
+![[Pasted image 20250414195513.png]]
+
+## Hurwicz Principle
+	- An alpha is declared. Which stands for optimism
+	-  0 < a < 1. a = 1 stands for extreme optmism and a = 0, stands for extreme pessimism
+	- a = 1 maxmax prinicple and a = 0 minmax principle
+
+![[Pasted image 20250414200038.png]]
+
+## Savage principle / Minimax regret 
+	- find the regret table
+	- choose stategy with minimum max regret
+
+![[Pasted image 20250414200726.png]]
+
+# Decision under risk
+## EMV criterion (expected monetary value) criterion
+## EOL (expected opportunity loss)
+## EVPI (expected value of perfect information)
+
+
+# Wages
+1) nominal wages
+	amount of money paid for his efforts. does not include free accomodation, medical allowance, etc.
+2) real wages
+	nominal wages + extra benefits
+## Time rate system
+## Piece rate system
+	

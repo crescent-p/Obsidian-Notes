@@ -1,4 +1,3 @@
-# Socket Programming
 
 ## Layers of Networking
 	1) Physical

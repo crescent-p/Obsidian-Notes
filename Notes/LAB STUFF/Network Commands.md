@@ -1,5 +1,4 @@
-# Network Commands
-## 1) ping 
+## 1) ping
 	Switches :- 
 		 -c [count] (Linux): Specify the number of pings to send.
 		 -n [count] (Windows): Number of echo requests to send.

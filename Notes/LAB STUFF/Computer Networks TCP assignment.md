@@ -36,6 +36,7 @@ network:
 	- Note down the latest sequence numbers.
 ```C
 sudo hping3 -R -p 22 -s <client_port> -a <clientip> -M <seq> <server_ip>
+sudo hping3 -R -p 38156 -s 22 -a 192.168.1.5 -M 2422668015 -L 1269185569 192.168.1.6
 ````
 
 ## Network options in virtual machine
@@ -60,3 +61,6 @@ sudo hping3 -R -p 22 -s <client_port> -a <clientip> -M <seq> <server_ip>
     - In wifi it is abovious. Capture all packets
     - in systems using switches and routers this is not possible as the data is forwaded to only intented recepients
     - in systems using hubs this method would work for capturing packets.
+
+
+``

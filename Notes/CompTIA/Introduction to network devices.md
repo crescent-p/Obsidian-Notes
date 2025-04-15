@@ -1,8 +1,6 @@
 
 # OSI Model
 	- 7 layers
-	
-
 	A device may operate at many levels but in formal terms it is deifined as the highest level it operates.
 
 # Layer 1 devices

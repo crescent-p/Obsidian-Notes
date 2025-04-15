@@ -6,8 +6,24 @@
 	5) Fractional Knapsack problem
 	6) karp reduction
 	7) Levin Cook Theorem
+	8) activity scheduling problem
+	9) knapsack problem (fractional and 0/1)
+	10) huffman codes (optimal prefix codes)
+	11) Complexity classes
+	12) clique problem
+		1) is there a clique of size g
+	13) hamiltonian cycle problem
+	14) circuit SAT
+	15) CNF sat isfiability
+	16) 3 CNF
+	17) set belonging or language recognition problem
+	18) 
 
+Sipser Book
+https://drive.uqu.edu.sa/_/mskhayat/files/MySubjects/20189FS%20ComputationTheory/Introduction%20to%20the%20theory%20of%20computation_third%20edition%20-%20Michael%20Sipser.pdf
 
+continue watching
+https://www.youtube.com/watch?v=usNf58x9FyA&ab_channel=ProfessorBryce
 # What is reduction?
 	- Problem A inputs are converted to equivalent (meaning the same YES/NO answers) Problem B inputs. 
 	- If B ε NP then A ε NP
@@ -194,4 +210,4 @@ $example :$
 	- f(n) != o(f(n))
 	- in short the complexity has to higher asymptotically, like (n^3 = o(n ^ 4) or o(n^3 * log(n)))
 	- O() is >= while o() is >
-	
+
