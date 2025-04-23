@@ -12,6 +12,7 @@
 		- unit testing
 		- integration testing
 		- validation testing
+		- system testing
 
 ## Unit Testing
 	1) Interface - test data flow across the components
@@ -271,3 +272,86 @@ ANSWER
 
 
 
+![[Pasted image 20250418213031.png]]
+
+![[Pasted image 20250418213059.png]]
+
+
+# Project Management
+## Management Spectrum
+	People
+	Product 
+	Process
+	Project
+
+### People
+	- People Capability Maturity Model (People-CMM)
+	- The Stakeholders
+		- senior managers
+		- project managers
+		- praticitioners
+		- customers
+		- end users
+### Organizational Paradigms
+	1) open paradigm
+	2) random paradigm
+	3) synchronous paradigm
+	4) closed paradigm
+
+
+
+## Diagrams
+
+![[Pasted image 20250422140534.png]]
+
+Class Diagram
+![[Pasted image 20250422141909.png]]
+Object diagram (show instances of classes in a particular time)
+![[Pasted image 20250422141954.png]]
+
+State Diagram
+![[Pasted image 20250422171528.png]]
+
+Activity Diagram
+![[Pasted image 20250422172153.png]]
+
+Usecase diagram <<extend/>>, <<include/>>
+![[Pasted image 20250422195214.png]]
+
+Waterfall development model
+- requirement analysis
+- design
+- development
+- coding 
+- testing
+- deployment
+- maintenance
+## Phased release model
+	- requirement gathering and analysis
+	- specification
+	- planning
+		- desgin
+		- implementation
+		- integration and deployement
+- This model still suggests that requirements may be present at the start of the development.
+
+## Test cases
+	1) Test scenario
+	2) test case
+	3) pre-condition
+	4) test steps
+	5) test data
+	6) expected result
+	7) post-conditions
+
+
+# Cost
+Functional Points
+![[Pasted image 20250422201119.png]]
+![[Pasted image 20250422201147.png]]
+
+![[Pasted image 20250422201310.png]]
+
+
+Metrics for source code - Halstead's Theory
+![[Pasted image 20250422201345.png]]

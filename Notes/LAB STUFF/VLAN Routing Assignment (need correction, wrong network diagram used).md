@@ -1,3 +1,8 @@
+RHL 
+	- Username : root
+	- Password : 123456
+	- init 5 for GUI
+
 	- Install 6 VM's
 	- INSTALL [traceroute, net-tools, wireshark, frr] (remeber to run sudo apt update to refresh packages)
 	- In 3 VM's you need to add an additional network card
@@ -32,10 +37,10 @@ network4[/network4/]
 ## My configuration
 ### Router 1a
 	- mac_address : ...d2, ...02
-	- network : intnet1, intnet2
+	- network : intnet1, intnet4
 ### Router 2
 	- mac_address : ...d0, ...06
-	- network : intnet2, intnet3
+	- network : intnet2, intnet4
 ### Router 3
 	- mac_address : ...a9, ...9e
 	- network : intnet3, intnet4

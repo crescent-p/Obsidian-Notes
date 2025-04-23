@@ -22,11 +22,6 @@ I have disabled all if role != checks -revert back in prod-
 	- VSCode debug has some issue use python app.py to start working.
 	
 # Implement more than 2 allocation for a student
-
-```python
-Map <studentid, List<string>[slots_alloted, last alloted pref, anti_luck] student
-```
-
 	
 # TODO
 	1) write a allocateFunction

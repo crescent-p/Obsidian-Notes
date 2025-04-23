@@ -19,7 +19,8 @@
 	12/04 : DAA
 	13/04 : CN
 	14/04 : Principle of Management
-	18/04 : software engineering
+	17/04 : network lab + DAA
+	18/04 : software engineering + DAA
 	19/04 : compiler
 	20/04 : compiler
 	22/04 : software engineering

@@ -96,7 +96,7 @@ what are end systems?
 
 	A Network of networks
 		- A few large well connceted ISPs (Tier 1 ISP commercial ISP) national and international converage
-		- content provider networks (a few private network tha connects its data centers to internet, bypassing tier 1 and regional ISP's)
+		- content provider networks (a few private network that connects its data centers to internet, bypassing tier 1 and regional ISP's)
 	
 ![[Pasted image 20250410150246.png]]
 
@@ -155,7 +155,7 @@ what are end systems?
 	- 10 devices are connected via a backbone.
 	- per connection avg throughput = min(Rs, Rc, R/10)
 	- the constrained factor for throughput in today's network is usuall the access network
-	- throughput depends not only on the transmission rates of the link along the path, but also on the intervening traffic.
+		- throughput depends not only on1 the transmission rates of the link along the path, but also on the intervening traffic.
 
 ## Layered Internet Protocol Stack
 	1) application
@@ -644,3 +644,165 @@ Congestion by timeout is a critical issue and needs harsh actions.
 
 ### Dijkstra's link state routing algorithm
 	- Centralized : network topology, link costs known to all nodes
+
+
+
+
+
+# IPv6
+## SLAAC (stateless address autoconfiguration)
+	enable IPv6 hosts to autoconfigure unique address without a centralized tracking, unlike DHCPv6
+	subnets using auto adddressing must be /64s
+	1) Link Local addresss generation
+		- The host generates a link local address from fe80::/64.
+		- using a radom value or its MAC-derived EUI-64
+			- the MAC address is unique so it uses it for the rest of the 64 host bits
+			- HOW TO?
+
+```
+Step 1: Split the MAC Address
+The 48-bit MAC address 00:50:79:66:68:1f is divided into two 24-bit parts:
+
+First half (OUI): 00:50:79
+Second half (NIC): 66:68:1f
+
+Step 2: Insert FFFE in the Middle
+Insert the 16-bit value FFFE between the two halves to create a 64-bit EUI-64 identifier:
+
+00:50:79:FF:FE:66:68:1f
+
+Step 3: Flip the 7th Bit (Universal/Local Bit)
+
+Flip the 7th bit (second bit from the left, highlighted below):
+00000000 → 00000010
+
+Convert back to hex:
+02
+
+This modifies the first octet from 00 to 02, ensuring the identifier is globally unique.
+
+Final EUI-64 Identifier
+After flipping the bit, the EUI-64 becomes:
+
+02:50:79:FF:FE:66:68:1f
+```
+
+
+
+		- DAD (duplicate address detection) verifies uniqueness via neighbour solicitation messages
+	2) Global address assignment
+		- Router sends a router solicitation (RS) to prompt routers for prefixes
+		- Router reply with a router advertisement (RA) contatingin network prefixes
+		- the host combines the network prefix along with interfaceID to form a global unicast address and runs DAD again
+
+![[Pasted image 20250415185506.png]]
+
+	Uses	5	ICMPv6	messages	
+	– Router	Solicitation	(RS)	–	request	routers	to	send	RA	
+	– Router	Advertisement	(RA)	–	router’s	address	and	subnet	parameters	
+	– Neighbor	Solicita;on	(NS)	–	request	neighbor’s	MAC	address	(ARP	Request)	
+	– Neighbor	Adver;sement	(NA)	–	MAC	address	for	an	IPv6	address	(ARP	Reply)	
+	– Redirect –	inform	host	of	a	beier	next	hop	for	a	desCnaCon
+	
+	
+	- IPv6 128 bits compared to IPv4 32 bits
+
+
+## Significant protocol changes
+	- increased MTU from 576 to 1280
+	- no enroute fragmentation. Fragmentation at source only
+	- header changes. A lot of fields where removed
+
+A new field flow label is introduced
+![[Pasted image 20250415164234.png]]
+
+### Flow label
+	- a flow label is 20 bit field in the IPv6 packet header to identify packets that belong to the same flow.
+	- A flow is sequence of packets send from a particular to source to a destination
+	- traffic class is used to set priority of packets
+### Traffic class
+	- replaces type of service field in ipv4
+	- 8 bit field
+	- first 6 bits for identifying service
+	- last 2 bits for congestion control without dropping packets (ECN explicit congestion notification)
+
+### Foramtting
+	- leading zeroes can be omitted
+	- continous string of zeroes can be replaced with ::
+	- only use bitcount with IPv6
+	- default route ::/0
+	- localhost/loopback ::1/128
+	- unspecified address ::/128
+
+
+## Type of IPv6 addresses
+	- Unicast addresess
+		- Packets send to the unicast address are delivered to just one device
+			- Global unicast
+				- routable on the internet. Just like IPv4 address
+				- 3 parts (48 bit global prefix, 16 bit subnet, 64bit interface ID)
+				- addresses that start with range 2000::/3  (in binary beginning is 0010:: /3)
+
+![[Pasted image 20250415174249.png]]
+			
+			- link local unicast 
+				- used for local communications
+				- prefix fe80::/10
+				- automatically assigned to every IPv6 device on the local link
+			- unique local unicast
+				- globally unique address for local communication. prefix fd00::/8
+				- they are useful when compaines merge and no conflict will occur in existing addresses
+				- they are not globally routable, making them secure
+	- multicast 
+		- often identifies a group on interfaces on different devices
+	- anycast
+		- anycast addreses are assisned to multiple addresses, but is only delivered to the nearest interface depending on the routing distance.
+		- uses the same address as unicast, mostly used for load balancing and redundancy.
+
+![[Pasted image 20250415175119.png]]
+
+#### Multicast
+| 8 bits | 4 bits | 4 bits  | 112 bits         |
+|--------|--------|---------|------------------|
+|   ff   |  flags |  scope  |   Group ID       |
+
+scope bits
+
+| Value | Scope              | Description                            |
+|:------|:-------------------|:---------------------------------------|
+|     1 | Interface-Local    | Restricted to a single interface.      |
+|     2 | Link-Local         | Local network segment (e.g.,ff02::).   |
+|     5 | Site-Local         | Entire site/organization.              |
+|     8 | Organization-Local | Multiple sites within an organization. |
+| e     | Global             | Internet-wide (e.g.,ff0e::).           |  
+
+| Type            | Example Address | Purpose                             |
+| --------------- | --------------- | ----------------------------------- |
+| **All Nodes**   | `ff02::1`       | All IPv6 nodes on the local link.   |
+| **All Routers** | `ff02::2`       | All IPv6 routers on the local link. |
+
+![[Pasted image 20250415201156.png]]
+
+
+# BGP
+	 - standardised exterior gateway protocol that enables global internet routing by exchaning network reachability information between autonomous systems. It maintains internet's routing table.
+	 - connects different ASs, cloud services.
+	 - path vector : usese attributes like AS path length, next hop address, and policy rules
+	 - TCP based reliability port 179
+	 - loop prevention : drop routers contiaing local AS number in their path history.
+	 - CIDR (classless inter domain routing) for efficient IP address allocation
+	 - BPG peers form TCP connections and send OPEN messages to authenticate
+	 - peers share routing updates via UPDATE messages containing network paths and attribute.
+
+## RIP 
+	- Hop count limit : max 15 hops
+	- periodic updates : broadcasts the entire routing table to neighbours every 30s
+	- uses bellman-forward algorithm for path calculation
+	- easy to configure but inefficient in large networks due to high bandwidth consupmtion
+## OSPF
+	- uses dijkstras algorithm to compute shortest path
+	- fast convergence
+	- hierarchial design : divides networks into areas to reduce overhead and improve scalability
+	- uses bandwidth instead of hop count to detemine optimal paths
+	- only updates when topology change occurs unlike RIP 
+	- link state
