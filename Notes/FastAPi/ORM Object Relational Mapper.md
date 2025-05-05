@@ -1,5 +1,5 @@
 
-[[ORM]] [[Python]] [[Relational]] [[DBMS]] [[SQL]]
+[[ORM]] [[Python backend Development/Python]] [[Relational]] [[DBMS]] [[SQL]]
 
 A layer of abstraction between DBMS and us.  We don't have to work with raw SQL. We can use python code.
 

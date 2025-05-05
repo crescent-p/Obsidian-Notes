@@ -13,15 +13,56 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uncategorized/Compiler.md",
+                "file": "AI/Things to watch.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Compiler"
+              "title": "Things to watch"
+            }
+          },
+          {
+            "id": "ff8313b9f1c8b35c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Uncategorized/Python.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Python"
+            }
+          },
+          {
+            "id": "0fcac29e2e6d6d46",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "AI/Deep Learning MIT Week 1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Deep Learning MIT Week 1"
+            }
+          },
+          {
+            "id": "f965f4fe946d5539",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.10"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.10"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -53,7 +94,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "software engineering",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -142,13 +183,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Uncategorized/Compiler.md",
+                "file": "AI/Deep Learning MIT Week 1.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Compiler"
+              "title": "Outline of Deep Learning MIT Week 1"
             }
           },
           {
@@ -182,44 +223,47 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "db4188772fdaadfa",
+  "active": "0fcac29e2e6d6d46",
   "lastOpenFiles": [
+    "Pasted image 20250505190109.png",
+    "Pasted image 20250505185939.png",
+    "Linux Driver/Untitled 1.md",
+    "AI/Deep Learning MIT Week 1.md",
+    "Pasted image 20250505181858.png",
+    "Pasted image 20250505175931.png",
+    "Pasted image 20250505175819.png",
+    "Pasted image 20250505175618.png",
+    "Pasted image 20250505170001.png",
+    "Pasted image 20250505124027.png",
+    "Pasted image 20250505123847.png",
+    "AI/Week 1.md",
+    "AI/How does GPT work.md",
+    "Uncategorized/Python.md",
+    "AI/Things to watch.md",
+    "LAB STUFF/OPEN ELECTIVE.md",
+    "Python backend Development/Django-Urls.md",
+    "System Design/Introduction.md",
+    "System Design/Designing Tinder.md",
+    "System Design/Designing Whatsapp.md",
+    "Uncategorized/Design and Analysis of Algorithms.md",
+    "Uncategorized/Untitled.md",
+    "Finance/Types of investments.md",
+    "AI",
+    "Uncategorized/TIME TABLE.md",
+    "Finance",
+    "LAB STUFF/VLAN Routing Assignment (need correction, wrong network diagram used).md",
+    "LAB STUFF/TCP routing PART B.md",
+    "LAB STUFF/Socket Programming.md",
+    "LAB STUFF/Network Commands.md",
+    "LAB STUFF/DNS setup.md",
+    "LAB STUFF/Computer Networks TCP assignment II.md",
+    "LAB STUFF/Computer Networks TCP assignment.md",
+    "LAB STUFF/Compiler LAB STAGE 0.md",
+    "Uncategorized/Compiler.md",
     "Uncategorized/Software Engineering.md",
     "Pasted image 20250422201345.png",
     "Pasted image 20250422201310.png",
-    "Pasted image 20250422201147.png",
-    "Pasted image 20250422201119.png",
-    "Pasted image 20250422195214.png",
-    "Pasted image 20250422172153.png",
-    "Pasted image 20250422171528.png",
-    "Pasted image 20250422141954.png",
-    "Pasted image 20250422141909.png",
-    "Pasted image 20250422140534.png",
-    "Uncategorized/Untitled.md",
-    "System Design/Introduction.md",
-    "Uncategorized/Compiler.md",
-    "LAB STUFF/Socket Programming.md",
-    "Uncategorized/TIME TABLE.md",
-    "Compiler Theory/Notes.md",
-    "MakeFile/Introduction.md",
-    "MakeFile/How to.md",
-    "App timeLine.md",
-    "LAB STUFF/VLAN Routing Assignment (need correction, wrong network diagram used).md",
     "4317375572.pdf",
-    "LAB STUFF/OPEN ELECTIVE.md",
-    "LAB STUFF/TCP routing PART B.md",
-    "LAB STUFF/Computer Networks TCP assignment II.md",
-    "LAB STUFF/Computer Networks TCP assignment.md",
-    "CompTIA/END SEMESTER PORTIONS REVISION.md",
-    "CompTIA/Introduction to network devices.md",
-    "Networks/Difference between IPv4 and IPv6.md",
-    "Networks/OSI model.md",
-    "Networks/VLAN's.md",
-    "FastAPi/Creating a Service in VM.md",
-    "Uncategorized/Principles of Management.md",
-    "Uncategorized/Design and Analysis of Algorithms.md",
-    "Networks/API.md",
-    "LAB STUFF/DNS setup.md",
     "GenAI",
     "Untitled.canvas",
     "CompTIA",
@@ -227,8 +271,6 @@
     "LAB STUFF",
     "Open Elective Allocation",
     "Network Lab",
-    "ICPC",
-    "Where is my bus",
-    "Linux Driver"
+    "ICPC"
   ]
 }

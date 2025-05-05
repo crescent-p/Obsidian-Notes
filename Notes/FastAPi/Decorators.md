@@ -1,4 +1,4 @@
-[[Python]]
+[[Python backend Development/Python]]
 
 In Python, **decorators** are a powerful and flexible tool that allow you to modify or enhance the behavior of functions or methods without changing their actual code. They are essentially functions that take another function as an argument, extend or alter its behavior, and then return a new function.
 

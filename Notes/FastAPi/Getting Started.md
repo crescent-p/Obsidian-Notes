@@ -1,4 +1,4 @@
-[[uvicorn]] [[Python]] [[fastapi]]
+[[uvicorn]] [[Python backend Development/Python]] [[fastapi]]
 ``` python
 from fastapi import FastAPI
 

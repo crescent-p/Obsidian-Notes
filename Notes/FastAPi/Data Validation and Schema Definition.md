@@ -1,4 +1,4 @@
-[[Python]] [[fastApi]] [[database]] [[pydantic]]
+[[Python backend Development/Python]] [[fastApi]] [[database]] [[pydantic]]
 
 `from pydantic import BaseModel`
 
